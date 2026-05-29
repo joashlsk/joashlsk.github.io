@@ -166,11 +166,31 @@ a {
     margin: 0 auto;
 }
 
+.hero-photo-wrapper {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #1a1a1a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(26, 26, 26, 0.15);
+}
+
 .hero-name {
     font-size: 4rem;
     font-weight: 700;
     color: #1a1a1a;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     letter-spacing: -0.03em;
 }
 
@@ -180,6 +200,14 @@ a {
     color: #666;
     margin-bottom: 2rem;
     letter-spacing: -0.005em;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #888;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.003em;
 }
 
 .hero-summary {
@@ -346,6 +374,22 @@ a {
     padding: 2rem;
 }
 
+.portfolio-meta {
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+.meta-item {
+    display: inline-block;
+}
+
+.meta-separator {
+    margin: 0 0.5rem;
+}
+
 .portfolio-title {
     font-size: 1.375rem;
     font-weight: 600;
@@ -358,6 +402,36 @@ a {
     color: #555;
     line-height: 1.7;
     margin-bottom: 1.5rem;
+}
+
+.portfolio-tech {
+    font-size: 0.95rem;
+    color: #666;
+    background-color: #f9f9f9;
+    padding: 0.875rem 1rem;
+    border-radius: 0.375rem;
+    margin-bottom: 1rem;
+    border-left: 3px solid #1a1a1a;
+}
+
+.portfolio-tech strong {
+    color: #1a1a1a;
+    font-weight: 600;
+}
+
+.portfolio-impact {
+    font-size: 0.95rem;
+    color: #666;
+    background-color: #f0f8ff;
+    padding: 0.875rem 1rem;
+    border-radius: 0.375rem;
+    margin-bottom: 1.5rem;
+    border-left: 3px solid #0066cc;
+}
+
+.portfolio-impact strong {
+    color: #0066cc;
+    font-weight: 600;
 }
 
 .portfolio-tags {
@@ -503,6 +577,11 @@ a {
         font-size: 1.25rem;
     }
 
+    .hero-photo {
+        width: 120px;
+        height: 120px;
+    }
+
     .section-title {
         font-size: 2rem;
     }
@@ -641,6 +720,17 @@ a {
         margin-bottom: 1.5rem;
     }
 
+    .hero-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero-photo {
+        width: 100px;
+        height: 100px;
+        border-width: 2px;
+    }
+
     .hero-summary {
         font-size: 0.95rem;
         margin-bottom: 2rem;
@@ -693,6 +783,16 @@ a {
         font-size: 0.95rem;
     }
 
+    .portfolio-meta {
+        font-size: 0.85rem;
+    }
+
+    .portfolio-tech,
+    .portfolio-impact {
+        font-size: 0.9rem;
+        padding: 0.75rem 0.875rem;
+    }
+
     .experience-role,
     .skills-category {
         font-size: 1.15rem;
@@ -742,8 +842,16 @@ a {
         color: #bbb;
     }
 
+    .hero-subtitle {
+        color: #999;
+    }
+
     .hero-summary {
         color: #aaa;
+    }
+
+    .hero-photo {
+        border-color: #ffffff;
     }
 
     .section-title {
@@ -833,6 +941,30 @@ a {
     .tag:hover {
         background-color: #444;
         color: #ffffff;
+    }
+
+    .portfolio-meta {
+        color: #777;
+    }
+
+    .portfolio-tech {
+        background-color: #1a1a1a;
+        border-left-color: #666;
+        color: #aaa;
+    }
+
+    .portfolio-tech strong {
+        color: #ddd;
+    }
+
+    .portfolio-impact {
+        background-color: #0a1a2e;
+        border-left-color: #0088ff;
+        color: #aaa;
+    }
+
+    .portfolio-impact strong {
+        color: #88ccff;
     }
 
     .skills {
