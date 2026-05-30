@@ -1,0 +1,152 @@
+.project-page {
+    padding: 4rem 0;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 2rem;
+    color: #666;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #1a1a1a;
+}
+
+.project-header {
+    margin-bottom: 4rem;
+}
+
+.project-title {
+    font-size: 3rem;
+    color: #1a1a1a;
+    margin: 1rem 0 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.project-description {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-bottom: 1.5rem;
+}
+
+.project-section {
+    margin-bottom: 4rem;
+}
+
+.project-section-title {
+    font-size: 1.75rem;
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.video-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.project-video {
+    width: 100%;
+    border-radius: 0.5rem;
+    background-color: #1a1a1a;
+}
+
+.media-caption {
+    font-size: 0.9rem;
+    color: #999;
+    text-align: center;
+    margin: 0;
+}
+
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: zoom-in;
+}
+
+.gallery-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 768px) {
+    .project-title {
+        font-size: 2rem;
+    }
+
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .image-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .project-title {
+        font-size: 1.5rem;
+    }
+
+    .image-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .project-page {
+        background-color: #1a1a1a;
+    }
+
+    .back-link {
+        color: #aaa;
+    }
+
+    .back-link:hover {
+        color: #ffffff;
+    }
+
+    .project-title {
+        color: #ffffff;
+    }
+
+    .project-description {
+        color: #ccc;
+    }
+
+    .project-section-title {
+        color: #ffffff;
+        border-bottom-color: #333;
+    }
+
+    .media-caption {
+        color: #777;
+    }
+
+    .gallery-image {
+        border-color: #333;
+    }
+}
