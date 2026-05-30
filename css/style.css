@@ -428,6 +428,21 @@ a {
     margin: 0;
 }
 
+.testimonial-pdf-link {
+    display: inline-block;
+    margin-top: 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #888;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.3s ease;
+}
+
+.testimonial-pdf-link:hover {
+    color: #1a1a1a;
+}
+
 @media (max-width: 768px) {
     .testimonial-card {
         padding: 2rem 1.5rem;
@@ -473,6 +488,14 @@ a {
     }
 
     .testimonial-trigger:hover {
+        color: #ffffff;
+    }
+
+    .testimonial-pdf-link {
+        color: #666;
+    }
+
+    .testimonial-pdf-link:hover {
         color: #ffffff;
     }
 }
