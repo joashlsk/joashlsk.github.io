@@ -329,6 +329,35 @@ a {
     line-height: 1.7;
 }
 
+.experience-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.3s ease;
+}
+
+.experience-link:hover {
+    color: #555;
+}
+
+.experience-link-badge {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #888;
+    background-color: #f0f0f0;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+}
+
 /* ============================================
    Works / Portfolio Section
    ============================================ */
@@ -914,6 +943,19 @@ a {
 
     .experience-description {
         color: #ccc;
+    }
+
+    .experience-link {
+        color: #ddd;
+    }
+
+    .experience-link:hover {
+        color: #aaa;
+    }
+
+    .experience-link-badge {
+        color: #777;
+        background-color: #333;
     }
 
     .works {
