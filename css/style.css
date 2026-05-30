@@ -176,10 +176,11 @@ a {
 }
 
 .hero-photo {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
+    width: 200px;
+    height: 250px;
+    border-radius: 0.75rem;
     object-fit: cover;
+    object-position: top;
     border: 3px solid #1a1a1a;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -757,8 +758,8 @@ a {
     }
 
     .hero-photo {
-        width: 120px;
-        height: 120px;
+        width: 170px;
+        height: 210px;
     }
 
     .section-title {
@@ -905,8 +906,8 @@ a {
     }
 
     .hero-photo {
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 185px;
         border-width: 2px;
     }
 
