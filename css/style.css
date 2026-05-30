@@ -385,9 +385,13 @@ a {
     background-color: #ffffff;
 }
 
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 2rem;
+}
+
 .testimonial-card {
-    max-width: 780px;
-    margin: 0 auto;
     padding: 3rem;
     border-left: 4px solid #1a1a1a;
     background-color: #fafafa;
@@ -445,6 +449,10 @@ a {
 }
 
 @media (max-width: 768px) {
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
     .testimonial-card {
         padding: 2rem 1.5rem;
     }
@@ -457,6 +465,10 @@ a {
 @media (prefers-color-scheme: dark) {
     .testimonial-section {
         background-color: #1a1a1a;
+    }
+
+    .testimonial-grid {
+        gap: 1.5rem;
     }
 
     .testimonial-card {
