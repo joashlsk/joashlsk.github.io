@@ -48,7 +48,7 @@
 
 .video-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
 }
 
@@ -77,6 +77,13 @@
     gap: 1.5rem;
 }
 
+.gallery-figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+}
+
 .gallery-image {
     width: 100%;
     aspect-ratio: 4 / 3;
@@ -90,6 +97,22 @@
 .gallery-image:hover {
     transform: scale(1.02);
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-caption {
+    font-size: 0.875rem;
+    color: #888;
+    line-height: 1.5;
+}
+
+/* ============================================
+   Dark mode additions
+   ============================================ */
+
+@media (prefers-color-scheme: dark) {
+    .gallery-caption {
+        color: #666;
+    }
 }
 
 @media (max-width: 768px) {
