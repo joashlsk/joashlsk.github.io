@@ -332,6 +332,7 @@ a {
 .experience-link {
     display: inline-flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 0.6rem;
     margin-top: 1rem;
     font-size: 0.9rem;
@@ -356,6 +357,7 @@ a {
     border-radius: 0.25rem;
     text-decoration: none;
     letter-spacing: 0.02em;
+    white-space: nowrap;
 }
 
 /* ============================================
