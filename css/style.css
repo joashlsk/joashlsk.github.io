@@ -545,6 +545,12 @@ a {
     display: block;
 }
 
+.portfolio-image--contain {
+    object-fit: contain;
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+}
+
 .portfolio-content {
     padding: 2rem;
 }
