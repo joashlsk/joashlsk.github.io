@@ -49,6 +49,10 @@ p {
     margin-bottom: 1em;
 }
 
+p:last-child {
+    margin-bottom: 0;
+}
+
 a {
     color: inherit;
     text-decoration: none;
@@ -79,11 +83,10 @@ a {
 .navbar {
     position: sticky;
     top: 0;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.95);
     border-bottom: 1px solid #f0f0f0;
     z-index: 1000;
     backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.95);
 }
 
 .nav-container {
@@ -279,7 +282,7 @@ a {
 
 .experience-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
