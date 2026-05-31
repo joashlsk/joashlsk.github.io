@@ -35,10 +35,10 @@
                     <strong>Objective:</strong> Balance economical and physical realities to find the absolute cheapest generation schedule that meets demand. We use linear programming to solve for this optimum.
                 </p>
                 <div class="portfolio-tech">
-                    <strong>Tech Stack:</strong> <!-- Add tech stack -->
+                    <strong>Tech Stack:</strong> Julia, JuMP (mathematical optimization modeling), Linear Programming, DC Power Flow Modeling
                 </div>
                 <div class="portfolio-impact">
-                    <strong>Impact:</strong> <!-- Add impact -->
+                    <strong>Impact:</strong> Solved a multi-bus Singapore grid for the least-cost dispatch schedule — $531,317 total cost meeting full demand while satisfying carbon, renewable, reserve, and transmission constraints.
                 </div>
                 <div class="portfolio-tags">
                     <span class="tag">Optimization</span>
@@ -50,6 +50,27 @@
                 <h2 class="project-section-title">Problem Statement</h2>
                 <p class="project-description">
                     DC-Optimal Power Flow finds the cheapest generation schedule respecting physical transmission limits. We extend it with four Singapore sustainability constraints.
+                </p>
+            </section>
+
+            <!-- Technical Approach -->
+            <section class="project-section">
+                <h2 class="project-section-title">Technical Approach</h2>
+                <p class="project-description">
+                    We modeled Singapore's transmission network as a graph of generator and demand buses (Jurong East, Clementi, Woodlands, Tampines, Bedok) connected by transmission lines, then formulated the dispatch problem as a linear program in <strong>Julia using the JuMP optimization framework</strong>.
+                </p>
+                <p class="project-description">
+                    The model uses the <strong>DC power flow approximation</strong>, where real power flow on each line is a linear function of the voltage-angle difference between its end buses divided by line reactance. This linearization keeps the entire problem an LP, allowing us to solve to a global optimum efficiently. The core formulation includes:
+                </p>
+                <ul class="project-list">
+                    <li><strong>Objective:</strong> minimize total generation cost, the sum of each generator's marginal cost multiplied by its output.</li>
+                    <li><strong>Nodal power balance:</strong> at every bus, generation minus demand equals the net power flowing out across connected lines (Kirchhoff's law).</li>
+                    <li><strong>Transmission &amp; generation limits:</strong> line flows stay within thermal capacity and each generator dispatches within its minimum/maximum bounds.</li>
+                    <li><strong>Reference bus:</strong> one bus's voltage angle is fixed at zero to anchor the angle solution.</li>
+                    <li><strong>Linearized losses:</strong> resistive line losses approximated linearly and folded into the balance equations.</li>
+                </ul>
+                <p class="project-description">
+                    On top of the base DC-OPF we layered <strong>four Singapore sustainability constraints</strong>: a carbon-emissions cap, a minimum renewable-energy share, and a spinning power-reserve margin — extending the classic least-cost dispatch into a sustainability-aware one. Solving the extended LP in Julia produced the optimal flow on every line and generation level at every bus, yielding a total cost of <strong>$531,317</strong> while meeting full demand and every physical and sustainability constraint.
                 </p>
             </section>
 
