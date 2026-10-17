@@ -217,7 +217,8 @@
         color: #ffffff;
     }
 
-    .project-description {
+    .project-description,
+    .project-list {
         color: #ccc;
     }
 
