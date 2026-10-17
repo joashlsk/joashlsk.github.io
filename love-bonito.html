@@ -22,7 +22,7 @@
 
     <main class="project-page">
         <div class="container">
-            <a href="index.html#experience" class="back-link">← Back to Experience</a>
+            <a href="index.html#works" class="back-link">← Back to Works</a>
 
             <div class="project-header">
                 <div class="portfolio-meta">
@@ -50,9 +50,49 @@
                 </div>
             </div>
 
-            <!-- Gallery: photos to be added -->
+            <section class="project-section">
+                <h2 class="project-section-title">Gallery</h2>
+                <div class="image-gallery">
+                    <figure class="gallery-figure">
+                        <img src="assets/images/lb_warehouse.jpg" alt="Distribution centre warehouse racking" class="gallery-image">
+                        <figcaption class="gallery-caption">Walking the floor of a 3PL distribution centre — high-bay racking, pallet staging and pick stations.</figcaption>
+                    </figure>
+                    <figure class="gallery-figure">
+                        <img src="assets/images/lb_stockroom.jpg" alt="Stockroom shelving with garment stock" class="gallery-image">
+                        <figcaption class="gallery-caption">Stockroom visit — seeing how garment stock is shelved and labelled at bin level.</figcaption>
+                    </figure>
+                </div>
+            </section>
         </div>
     </main>
+
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close">&times;</button>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        document.querySelectorAll('.gallery-image').forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+    </script>
 
     <footer class="footer">
         <div class="container">
